@@ -1,0 +1,18 @@
+import Foundation
+
+/// Copy this file to GoogleOAuthConfig.swift (same folder, drop the
+/// ".example" suffix) and fill in your own credentials from Google Cloud
+/// Console → APIs & Services → Credentials → OAuth client ID
+/// (Application type: Desktop app). GoogleOAuthConfig.swift is gitignored.
+enum GoogleOAuthConfig {
+    static let clientID = "YOUR_CLIENT_ID.apps.googleusercontent.com"
+    static let clientSecret = "YOUR_CLIENT_SECRET"
+    // openid + email let us read which account just authorized (via the
+    // returned id_token) so we can key that account's token in Keychain
+    // and show its address in Settings.
+    static let scopes = [
+        "https://www.googleapis.com/auth/calendar.readonly",
+        "openid",
+        "email"
+    ]
+}

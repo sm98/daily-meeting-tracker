@@ -1,0 +1,5 @@
+.build/
+.swiftpm/
+.DS_Store
+# Real OAuth credentials — copy GoogleOAuthConfig.swift.example instead
+Sources/MenuBarCalendar/GoogleOAuthConfig.swift
